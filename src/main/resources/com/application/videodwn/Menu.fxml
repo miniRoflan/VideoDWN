@@ -5,9 +5,9 @@
 <?import javafx.scene.shape.Line?>
 <?import javafx.scene.text.Font?>
 
-<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="150.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.application.videodwn.Controllers.MenuController">
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="150.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.application.videodwn.controllers.MenuController">
    <children>
-      <Button fx:id="saveVideoBTN" mnemonicParsing="false" prefHeight="50.0" prefWidth="150.0" text="SAVE VIDEO">
+      <Button fx:id="saveVideoBTN" mnemonicParsing="false" prefHeight="50.0" prefWidth="150.0" text="SAVED VIDEOS">
          <font>
             <Font name="Arial Black" size="14.0" />
          </font>

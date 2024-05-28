@@ -1,6 +1,6 @@
-package com.application.videodwn.Controllers;
+package com.application.videodwn.controllers;
 
-import com.application.videodwn.Model;
+import com.application.videodwn.models.Model;
 import javafx.fxml.Initializable;
 import javafx.scene.layout.BorderPane;
 

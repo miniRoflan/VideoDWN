@@ -4,14 +4,14 @@
 
 <BorderPane fx:id="pparent" xmlns="http://javafx.com/javafx"
             xmlns:fx="http://javafx.com/fxml"
-            fx:controller="com.application.videodwn.Controllers.GlueController">
+            fx:controller="com.application.videodwn.controllers.GlueController">
 
     <left>
         <fx:include source="Menu.fxml"></fx:include>
     </left>
 
     <center>
-        <fx:include source="SaveVideoBoard.fxml"></fx:include>
+        <fx:include source="DwnBoard.fxml"></fx:include>
     </center>
 
 </BorderPane>

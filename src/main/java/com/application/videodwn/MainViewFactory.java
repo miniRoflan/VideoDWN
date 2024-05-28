@@ -1,6 +1,6 @@
 package com.application.videodwn;
 
-import com.application.videodwn.Controllers.MenuController;
+import com.application.videodwn.controllers.SaveVideoBoardController;
 import javafx.beans.property.SimpleStringProperty;
 import javafx.beans.property.StringProperty;
 import javafx.fxml.FXMLLoader;
@@ -8,13 +8,14 @@ import javafx.scene.Scene;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
 
-public class ViewFactory {
+public class MainViewFactory {
     private AnchorPane saveVideoBoardView;
     private AnchorPane dwnBoardView;
     private final StringProperty selectedMenu;
+    private SaveVideoBoardController saveVideoBoardController;
 
 
-    public ViewFactory() {
+    public MainViewFactory() {
         this.selectedMenu = new SimpleStringProperty("");
     }
 
@@ -25,9 +26,11 @@ public class ViewFactory {
     public AnchorPane getSaveVideoBoardView() {
         if (saveVideoBoardView == null) {
             try {
-                saveVideoBoardView = new FXMLLoader(getClass().getResource("SaveVideoBoard.fxml")).load();
+                FXMLLoader loader = new FXMLLoader(getClass().getResource("SaveVideoBoard.fxml"));
+                saveVideoBoardView = loader.load();
+                this.saveVideoBoardController = loader.getController();
             } catch (Exception e) {
-
+                e.printStackTrace();
             }
         }
 
@@ -39,23 +42,25 @@ public class ViewFactory {
             try {
                 dwnBoardView = new FXMLLoader(getClass().getResource("DwnBoard.fxml")).load();
             } catch (Exception e) {
-
+                e.printStackTrace();
             }
         }
 
         return dwnBoardView;
     }
 
+    public SaveVideoBoardController getSaveVideoBoardController() {
+        return this.saveVideoBoardController;
+    }
+
     public void showMenu() {
         FXMLLoader loader = new FXMLLoader(getClass().getResource("Glue.fxml"));
-        //MenuController menuController = new MenuController();
-        //loader.setController(menuController);
 
         Scene scene = null;
         try {
             scene = new Scene(loader.load());
         } catch (Exception e) {
-
+            e.printStackTrace();
         }
 
         Stage stage = new Stage();

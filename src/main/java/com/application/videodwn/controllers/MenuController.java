@@ -1,6 +1,6 @@
-package com.application.videodwn.Controllers;
+package com.application.videodwn.controllers;
 
-import com.application.videodwn.Model;
+import com.application.videodwn.models.Model;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
 
@@ -23,13 +23,9 @@ public class MenuController implements Initializable {
 
     private void onSaveVideoBTN() {
         Model.getInstance().getViewFactory().getSelectedMenu().set("SaveVideoBoard");
-        System.out.println("SAVE BTN");
-        System.out.println(Model.getInstance().getViewFactory().getSelectedMenu());
     }
 
     private void onDownloadBTN() {
         Model.getInstance().getViewFactory().getSelectedMenu().set("DwnBoard");
-        System.out.println("DWN BTN");
-        System.out.println(Model.getInstance().getViewFactory().getSelectedMenu());
     }
 }
